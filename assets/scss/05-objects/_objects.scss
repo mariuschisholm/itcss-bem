@@ -1,0 +1,6 @@
+/* Objects */
+
+// This is the first layer with class-based selectors. It contains styles for non-cosmetic
+// objects such as containers, wrappers and layout systems. This layer also affects less of
+// the DOM than the elements layer, has a higher specificity, and is slightly more explicit 
+// given that we are now targeting specific sections of the DOM with classes.

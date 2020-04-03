@@ -1,0 +1,5 @@
+/* Tools */
+
+// This contains global functions and mixins and it comes after the settings 
+// since the mixins and functions might need access to global settings. Examples 
+// are font-size mixins px-to-rem mixins, etc. No styles are written here.

@@ -1,0 +1,19 @@
+////
+/// @group 01: Settings
+////
+
+/// Rem output with px fallback.
+///
+/// @author Marius Chisholm
+///
+/// @param {Number} $sizeValue - Element's font size
+/// @output `font-size` with fallback
+///
+/// @example scss - Apply rem font-size to `.foo`
+///   .foo {
+///       @include font-size(1.2);
+///   }
+@mixin font-size($sizeValue: 1) {
+  font-size: ($sizeValue * 16) * 1px;
+  font-size: $sizeValue * 1rem;
+}

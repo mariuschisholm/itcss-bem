@@ -1,0 +1,26 @@
+////
+/// @group 07: Utilities
+////
+
+// Sass map to generate margin and padding helpers
+// @author Marius Chisholm
+//
+// @param {Number} $spaceValues - The amount of space, in `px`
+// @param {Number} $cardinalSides - The sides to build for (e.g. `top, right, bottom, left`)
+// @output Classes such as `.m-t-5'`. This class would apply `margin-top: 5px !important`
+// TODO: Implement map into docs (requires different syntax)
+
+$spaceValues: (5, 10, 15, 20, 30, 40, 50);
+$cardinalSides: (top, bottom, left, right);
+
+@each $space in $spaceValues {
+  @each $side in $cardinalSides {
+    .m-#{str-slice($side, 0, 1)}-#{$space} {
+      margin-#{$side}: #{$space}px !important;
+    }
+  
+    .p-#{str-slice($side, 0, 1)}-#{$space} {
+      padding-#{$side}: #{$space}px !important;
+    }
+  }
+}
